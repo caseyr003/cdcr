@@ -40,7 +40,7 @@ const datas = [
 		bg: "#C5F442",
 	},
 	{
-		name: "Associates",
+		name: "Vistors",
 		route: "Header",
 		icon: "person",
 		bg: "#477EEA",

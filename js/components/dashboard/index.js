@@ -50,7 +50,7 @@ class NHCardImage extends Component {
                 </Body>
               </Left>
             </CardItem>
-
+            
             <CardItem cardBody>
 
             </CardItem>
@@ -67,7 +67,7 @@ class NHCardImage extends Component {
               <Body>
                 <Button iconLeft transparent>
                   <Icon active name="chatbubbles" />
-                  <Text>2 Associates</Text>
+                  <Text>3 Visitors</Text>
                 </Button>
               </Body>
               <Right>

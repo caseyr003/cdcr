@@ -18,38 +18,38 @@ import {
 import styles from "./styles";
 
 const datas = [
-  {
-    route: "Header1",
-    text: "Only Title"
-  },
+  // {
+  //   route: "Header1",
+  //   text: "Only Title"
+  // },
   {
     route: "Header2",
-    text: "Icon Buttons"
+    text: "Permitted"
   },
   {
     route: "Header3",
-    text: "Text Buttons"
+    text: "Pending"
   },
   {
     route: "Header4",
-    text: "Icon Button and Text Button"
-  },
-  {
-    route: "Header5",
-    text: "Icon and Text Buttons"
-  },
-  {
-    route: "Header6",
-    text: "Multiple Icon Buttons"
-  },
-  {
-    route: "Header7",
-    text: "Title and Subtitle"
-  },
-  {
-    route: "Header8",
-    text: "Custom Background Color"
+    text: "Forbidden"
   }
+  // {
+  //   route: "Header5",
+  //   text: "Icon and Text Buttons"
+  // },
+  // {
+  //   route: "Header6",
+  //   text: "Multiple Icon Buttons"
+  // },
+  // {
+  //   route: "Header7",
+  //   text: "Title and Subtitle"
+  // },
+  // {
+  //   route: "Header8",
+  //   text: "Custom Background Color"
+  // }
 ];
 
 class HeaderNB extends Component {
@@ -68,7 +68,7 @@ class HeaderNB extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Headers</Title>
+            <Title>Vistors</Title>
           </Body>
           <Right />
 
@@ -88,7 +88,6 @@ class HeaderNB extends Component {
                 </Right>
               </ListItem>}
           />
-
         </Content>
       </Container>
     );
