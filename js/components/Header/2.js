@@ -18,8 +18,8 @@ import {
 
 import styles from "./styles";
 const chapman = require("../../../img/chapman.png");
-const white = require("../../../img/white.jpg");
 const vause = require("../../../img/vause.png");
+const white = require("../../../img/white.jpg");
 
 
 
@@ -60,25 +60,26 @@ class Header2 extends Component {
             
             <CardItem cardBody>
 
-            </CardItem>
             <Button transparent>
               <Text>Schedule Meeting</Text>
             </Button>
+
+            </CardItem>
             <CardItem style={{ paddingVertical: 0 }}>
               <Left>
                 <Button iconLeft transparent>
                   <Icon active name="thumbs-up" />
-                  <Text>21 Meetings</Text>
+                  <Text>Application Recieved</Text>
                 </Button>
               </Left>
               <Body>
                 <Button iconLeft transparent>
                   <Icon active name="chatbubbles" />
-                  <Text>10 messages</Text>
+                  <Text>5 messages</Text>
                 </Button>
               </Body>
               <Right>
-                <Text>1h ago</Text>
+                <Text>4 hours ago</Text>
               </Right>
             </CardItem>
           </Card>
@@ -114,7 +115,7 @@ class Header2 extends Component {
                 </Button>
               </Body>
               <Right>
-                <Text>4h ago</Text>
+                <Text>8 hours ago</Text>
               </Right>
             </CardItem>
           </Card>
@@ -140,7 +141,7 @@ class Header2 extends Component {
               <Left>
                 <Button iconLeft transparent>
                   <Icon active name="thumbs-up" />
-                  <Text>40 Meetings</Text>
+                  <Text>10 Meetings</Text>
                 </Button>
               </Left>
               <Body>
@@ -150,7 +151,7 @@ class Header2 extends Component {
                 </Button>
               </Body>
               <Right>
-                <Text>3 days ago</Text>
+                <Text>30 days ago</Text>
               </Right>
             </CardItem>
           </Card>
