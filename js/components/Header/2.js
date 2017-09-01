@@ -69,7 +69,7 @@ class Header2 extends Component {
               <Left>
                 <Button iconLeft transparent>
                   <Icon active name="thumbs-up" />
-                  <Text>Application Recieved</Text>
+                  <Text> 10 Meetings</Text>
                 </Button>
               </Left>
               <Body>
