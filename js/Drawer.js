@@ -5,6 +5,7 @@ import { DrawerNavigator } from "react-navigation";
 
 import Home from "./components/home/";
 import Dashboard from "./components/dashboard/";
+import Schedule from "./components/schedule/";
 import Header from "./components/Header/";
 import Anatomy from "./components/anatomy/";
 import Footer from "./components/footer/";
@@ -40,6 +41,7 @@ import Actionsheet from "./components/actionsheet";
 const DrawerExample = DrawerNavigator(
   {
     Home: { screen: Home },
+    Schedule: { screen: Schedule },
     Dashboard: { screen: Dashboard },
     Anatomy: { screen: Anatomy },
     Header: { screen: Header },

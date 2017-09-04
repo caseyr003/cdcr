@@ -8,6 +8,7 @@ import { StackNavigator } from "react-navigation";
 
 import Drawer from "./Drawer";
 import Dashboard from "./components/dashboard/";
+import Schedule from "./components/schedule/";
 import Header from "./components/Header/";
 import Header1 from "./components/Header/1";
 import Header2 from "./components/Header/2";
@@ -85,6 +86,8 @@ const AppNavigator = StackNavigator(
         Drawer: { screen: Drawer },
 
         Dashboard: { screen: Dashboard },
+
+        Schedule: { screen: Schedule },
 
         Header1: { screen: Header1 },
         Header2: { screen: Header2 },

@@ -35,7 +35,7 @@ const datas = [
 	},
 	{
 		name: "Schedule",
-		route: "Actionsheet",
+		route: "Schedule",
 		icon: "paper",
 		bg: "#C5F442",
 	},
