@@ -7,68 +7,34 @@ import {
   Content,
   Button,
   Icon,
-  Text,
   Left,
-  Body,
   Right,
-  List,
-  ListItem
+  Body,
+  Text,
+  ListItem,
+  List
 } from "native-base";
 
 import styles from "./styles";
 
 const datas = [
   {
-    route: "FixedLabel",
-    text: "Fixed Label"
+    route: "Permitted",
+    text: "Permitted"
   },
   {
-    route: "InlineLabel",
-    text: "Inline Label"
+    route: "Forbidden",
+    text: "Forbidden"
   },
   {
-    route: "FloatingLabel",
-    text: "Floating Label"
-  },
-  {
-    route: "PlaceholderLabel",
-    text: "Placeholder Label"
-  },
-  {
-    route: "StackedLabel",
-    text: "Stacked Label"
-  },
-  {
-    route: "RegularInput",
-    text: "Regular Textbox"
-  },
-  {
-    route: "UnderlineInput",
-    text: "Underlined Textbox"
-  },
-  {
-    route: "RoundedInput",
-    text: "Rounded Textbox"
-  },
-  {
-    route: "IconInput",
-    text: "Icon Textbox"
-  },
-  {
-    route: "SuccessInput",
-    text: "Success Input Textbox"
-  },
-  {
-    route: "ErrorInput",
-    text: "Error Input Textbox"
-  },
-  {
-    route: "DisabledInput",
-    text: "Disabled Textbox"
+    route: "Pending",
+    text: "Pending"
   }
 ];
 
-class NHForm extends Component {
+class VistorsNB extends Component {
+  // eslint-disable-line
+
   render() {
     return (
       <Container style={styles.container}>
@@ -82,7 +48,7 @@ class NHForm extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Form & Inputs</Title>
+            <Title>Headers</Title>
           </Body>
           <Right />
 
@@ -102,10 +68,11 @@ class NHForm extends Component {
                 </Right>
               </ListItem>}
           />
+
         </Content>
       </Container>
     );
   }
 }
 
-export default NHForm;
+export default VistorsNB;

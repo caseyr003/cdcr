@@ -17,13 +17,13 @@ import {
 } from "native-base";
 
 import styles from "./styles";
-const chapman = require("../../../img/chapman.png");
-const vause = require("../../../img/vause.png");
-const white = require("../../../img/white.jpg");
+const waltjr = require("../../../img/waltjr.jpg");
+const skyler = require("../../../img/skyler.jpg");
+const jesse = require("../../../img/jesse.jpg");
 
 
 
-class Header2 extends Component {
+class Pending extends Component {
   // eslint-disable-line
 
   render() {
@@ -36,7 +36,7 @@ class Header2 extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Permitted</Title>
+            <Title>Pending</Title>
           </Body>
           <Right>
             <Button transparent onPress={() => this.props.navigation.goBack()}>
@@ -50,32 +50,61 @@ class Header2 extends Component {
           <Card style={styles.mb}>
             <CardItem>
               <Left>
-                <Thumbnail source={chapman} />
+                <Thumbnail source={jesse} />
                 <Body>
-                  <Text>Piper Chapman</Text>
-                  <Text note>Litchfield, NY</Text>
+                  <Text>Jesse Pinkman</Text>
+                  <Text note>Albuquerque, NM</Text>
                 </Body>
               </Left>
             </CardItem>
-            
-            <CardItem cardBody>
 
-            <Button transparent>
-              <Text>Schedule Meeting</Text>
-            </Button>
+            <CardItem cardBody>
 
             </CardItem>
             <CardItem style={{ paddingVertical: 0 }}>
               <Left>
                 <Button iconLeft transparent>
                   <Icon active name="thumbs-up" />
-                  <Text> 10 Meetings</Text>
+                  <Text>Application Recieved</Text>
                 </Button>
               </Left>
               <Body>
                 <Button iconLeft transparent>
                   <Icon active name="chatbubbles" />
                   <Text>5 messages</Text>
+                </Button>
+              </Body>
+              <Right>
+                <Text>4 days ago</Text>
+              </Right>
+            </CardItem>
+          </Card>
+
+          <Card style={styles.mb}>
+            <CardItem>
+              <Left>
+                <Thumbnail source={waltjr} />
+                <Body>
+                  <Text>Walter White Jr</Text>
+                  <Text note>Albuquerque, NM</Text>
+                </Body>
+              </Left>
+            </CardItem>
+
+            <CardItem cardBody>
+
+            </CardItem>
+            <CardItem style={{ paddingVertical: 0 }}>
+              <Left>
+                <Button iconLeft transparent>
+                  <Icon active name="thumbs-up" />
+                  <Text>Application Recieved</Text>
+                </Button>
+              </Left>
+              <Body>
+                <Button iconLeft transparent>
+                  <Icon active name="chatbubbles" />
+                  <Text>15 messages</Text>
                 </Button>
               </Body>
               <Right>
@@ -87,61 +116,22 @@ class Header2 extends Component {
           <Card style={styles.mb}>
             <CardItem>
               <Left>
-                <Thumbnail source={white} />
+                <Thumbnail source={skyler} />
                 <Body>
-                  <Text>Walter White</Text>
+                  <Text>Skyler White</Text>
                   <Text note>Albuquerque, NM</Text>
                 </Body>
               </Left>
             </CardItem>
-            
+
             <CardItem cardBody>
 
             </CardItem>
-            <Button transparent>
-              <Text>Schedule Meeting</Text>
-            </Button>
             <CardItem style={{ paddingVertical: 0 }}>
               <Left>
                 <Button iconLeft transparent>
                   <Icon active name="thumbs-up" />
-                  <Text>15 Meetings</Text>
-                </Button>
-              </Left>
-              <Body>
-                <Button iconLeft transparent>
-                  <Icon active name="chatbubbles" />
-                  <Text>15 messages</Text>
-                </Button>
-              </Body>
-              <Right>
-                <Text>8 hours ago</Text>
-              </Right>
-            </CardItem>
-          </Card>
-
-          <Card style={styles.mb}>
-            <CardItem>
-              <Left>
-                <Thumbnail source={vause} />
-                <Body>
-                  <Text>Alex Vause</Text>
-                  <Text note>Litchfield, NY</Text>
-                </Body>
-              </Left>
-            </CardItem>
-            
-            <CardItem cardBody>
-
-            </CardItem>
-            <Button transparent>
-              <Text>Schedule Meeting</Text>
-            </Button>
-            <CardItem style={{ paddingVertical: 0 }}>
-              <Left>
-                <Button iconLeft transparent>
-                  <Icon active name="thumbs-up" />
-                  <Text>10 Meetings</Text>
+                  <Text>Application Recieved</Text>
                 </Button>
               </Left>
               <Body>
@@ -151,7 +141,7 @@ class Header2 extends Component {
                 </Button>
               </Body>
               <Right>
-                <Text>30 days ago</Text>
+                <Text>13 days ago</Text>
               </Right>
             </CardItem>
           </Card>
@@ -162,4 +152,4 @@ class Header2 extends Component {
   }
 }
 
-export default Header2;
+export default Pending;

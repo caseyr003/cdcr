@@ -41,13 +41,13 @@ const datas = [
 	},
 	{
 		name: "Vistors",
-		route: "Header",
+		route: "Vistors",
 		icon: "person",
 		bg: "#477EEA",
 	},
 	{
 		name: "Meetings",
-		route: "Footer",
+		route: "Schedule",
 		icon: "paper",
 		bg: "#DA4437",
 	},
