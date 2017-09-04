@@ -16,7 +16,8 @@ export default {
     height: deviceHeight / 3.5,
     width: null,
     position: "relative",
-    marginBottom: 10
+    marginBottom: 10,
+    backgroundColor: "#008C57"
   },
   drawerImage: {
     position: "absolute",
@@ -24,17 +25,17 @@ export default {
     left: 20,
     // top: (Platform.OS === 'android') ? 45 : 55,
     top: 20,
-    width: 100,
-    height: 100,
+    width: 50,
+    height: 50,
   },
   drawerLogo: {
     position: "absolute",
     // left: (Platform.OS === 'android') ? 30 : 40,
-    left: 140,
+    left: 120,
     // top: (Platform.OS === 'android') ? 45 : 55,
-    top: 20,
-    width: 149,
-    height: 100,
+    top: 74,
+    width: 76,
+    height: 63,
   },
   listItemContainer: {
     flexDirection: "row",
@@ -65,5 +66,21 @@ export default {
     fontWeight: "400",
     textAlign: "center",
     marginTop: Platform.OS === "android" ? -3 : undefined
-  }
+  },
+  title: {
+    fontSize: 40,
+    color: "#fff",
+    textAlign: "center",
+    top: 110,
+    fontFamily: "Arial Rounded MT Bold"
+  },
+  cdcrTxt: {
+    fontSize: 14,
+    color: "#fff",
+    textAlign: "left",
+    top: 30,
+    left: 80,
+    width: 250,
+    fontFamily: "Arial Rounded MT Bold"
+  },
 };

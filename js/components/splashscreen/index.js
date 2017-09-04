@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Image } from "react-native";
 
-const splashscreen = require("../../../img/main-bg.png");
+const splashscreen = require("../../../img/launchscreen.png");
 
 export default class SplashPage extends Component {
   render() {

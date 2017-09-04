@@ -29,18 +29,22 @@ class Permitted extends Component {
   render() {
     return (
       <Container style={styles.container}>
-        <Header>
+        <Header
+          style={{ backgroundColor: "#008C57" }}
+          androidStatusBarColor="#008C57"
+          iosBarStyle="light-content"
+        >
           <Left>
             <Button transparent onPress={() => this.props.navigation.goBack()}>
-              <Icon name="arrow-back" />
+              <Icon style={{ color: "#fff" }} name="arrow-back" />
             </Button>
           </Left>
           <Body>
-            <Title>Permitted</Title>
+            <Title style={{ color: "#fff" }}>Permitted</Title>
           </Body>
           <Right>
             <Button transparent onPress={() => this.props.navigation.goBack()}>
-              <Icon name="menu" />
+              <Icon style={{ color: "#fff" }} name="menu" />
             </Button>
           </Right>
 

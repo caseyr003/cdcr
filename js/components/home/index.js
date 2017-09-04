@@ -21,8 +21,8 @@ import {
 
 import styles from "./styles";
 
-const launchscreenBg = require("../../../img/main-bg.png");
-const launchscreenLogo = require("../../../img/logo-new.png");
+const launchscreenBg = require("../../../img/login-bg.png");
+const launchscreenLogo = require("../../../img/pass-logo.png");
 
 const datas = [
 	{
@@ -43,24 +43,25 @@ class Home extends Component {
 				<Image source={launchscreenBg} style={styles.imageContainer}>
 					<View style={styles.logoContainer}>
 						<Image source={launchscreenLogo} style={styles.logo} />
+            <Text style={styles.title}>VPASS</Text>
 					</View>
 
-					<View style={{ marginBottom: 80 }}>
+					<View style={{ marginBottom: 110 }}>
 
-		          <Form>
+		          <Form style={styles.login}>
 		            <Item floatingLabel>
-		              <Label style={styles.white}>Username</Label>
-		              <Input style={styles.white} />
+		              <Label style={styles.gray}>Username</Label>
+		              <Input style={styles.gray} />
 		            </Item>
 		            <Item floatingLabel>
-		              <Label style={styles.white}>Password</Label>
-		              <Input secureTextEntry={true} style={styles.white} />
+		              <Label style={styles.gray}>Password</Label>
+		              <Input secureTextEntry={true} style={styles.gray} />
 		            </Item>
 		          </Form>
 		          <Button block style={styles.signinBtn} onPress={() => this.props.navigation.navigate("Dashboard")}>
 		            <Text>Sign In</Text>
 		          </Button>
-
+              <Text style={styles.register}>Don't have an account? <Text style={styles.request}>Request one</Text></Text>
 					</View>
 				</Image>
 			</Container>

@@ -27,14 +27,18 @@ class NHCardImage extends Component {
   render() {
     return (
       <Container style={styles.container}>
-        <Header>
+        <Header
+          style={{ backgroundColor: "#008C57" }}
+          androidStatusBarColor="#008C57"
+          iosBarStyle="light-content"
+        >
           <Left>
             <Button transparent onPress={() => this.props.navigation.navigate("DrawerOpen")}>
-              <Icon name="menu" />
+              <Icon style={{ color: "#fff" }} name="menu" />
             </Button>
           </Left>
           <Body>
-            <Title>Home</Title>
+            <Title style={{ color: "#fff" }}>VPASS</Title>
           </Body>
           <Right />
         </Header>
@@ -50,7 +54,7 @@ class NHCardImage extends Component {
                 </Body>
               </Left>
             </CardItem>
-            
+
             <CardItem cardBody>
 
             </CardItem>

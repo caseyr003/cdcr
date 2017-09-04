@@ -38,17 +38,21 @@ class VistorsNB extends Component {
   render() {
     return (
       <Container style={styles.container}>
-        <Header>
+        <Header
+          style={{ backgroundColor: "#008C57" }}
+          androidStatusBarColor="#008C57"
+          iosBarStyle="light-content"
+        >
           <Left>
             <Button
               transparent
               onPress={() => this.props.navigation.navigate("DrawerOpen")}
             >
-              <Icon name="menu" />
+              <Icon style={{ color: "#fff" }} name="menu" />
             </Button>
           </Left>
           <Body>
-            <Title>Vistors</Title>
+            <Title style={{ color: "#fff" }}>Vistors</Title>
           </Body>
           <Right />
 

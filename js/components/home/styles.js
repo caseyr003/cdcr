@@ -17,10 +17,10 @@ export default {
   },
   logo: {
     position: "absolute",
-    left: Platform.OS === "android" ? 40 : 50,
-    top: Platform.OS === "android" ? 35 : 60,
-    width: 280,
-    height: 187
+    left: Platform.OS === "android" ? 40 : 133,
+    top: Platform.OS === "android" ? 35 : 40,
+    width: 110,
+    height: 91
   },
   text: {
     color: "#D8D8D8",
@@ -28,12 +28,37 @@ export default {
     marginTop: 5
   },
   signinBtn: {
-    backgroundColor: "#FBAD23",
-    margin: 15,
+    backgroundColor: "#FFB800",
+    margin: 32,
     marginTop: 20,
-    marginBottom: 40
+    marginBottom: 10
   },
-  white: {
-    color: "#fff"
+  gray: {
+    color: "#656565"
+  },
+  login: {
+    width: 328,
+    left: 24,
+    backgroundColor: "#fff",
+    borderRadius: 8
+  },
+  title: {
+    fontSize: 70,
+    color: "#fff",
+    textAlign: "center",
+    top: Platform.OS === "android" ? 35 : 140,
+    fontFamily: "Arial Rounded MT Bold"
+  },
+  register: {
+    textAlign: "center",
+    fontFamily: "Arial Rounded MT Bold",
+    fontSize: 14,
+    color: "#656565"
+  },
+  request: {
+    textAlign: "center",
+    fontFamily: "Arial Rounded MT Bold",
+    fontSize: 14,
+    color: "#008C57"
   }
 };

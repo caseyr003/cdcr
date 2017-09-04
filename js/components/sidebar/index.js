@@ -20,11 +20,9 @@ import {
 
 import styles from "./style";
 
-const drawerCover = require("../../../img/menu-bg.png");
-
 const drawerImage = require("../../../img/cdcr.png");
 
-const drawerLogo = require("../../../img/logo-new.png");
+const drawerLogo = require("../../../img/pass-logo.png");
 
 const datas = [
 	{
@@ -72,9 +70,11 @@ class SideBar extends Component {
 		return (
 			<Container>
 				<Content bounces={false} style={{ flex: 1, backgroundColor: "#fff", top: -1 }}>
-					<Image source={drawerCover} style={styles.drawerCover}>
+					<Image style={styles.drawerCover}>
 						<Image square style={styles.drawerImage} source={drawerImage} />
+						<Text style={styles.cdcrTxt}>California Department of Corrections and Rehabilitation</Text>
 						<Image square style={styles.drawerLogo} source={drawerLogo} />
+						<Text style={styles.title}>VPASS</Text>
 					</Image>
 					<List
 						dataArray={datas}
