@@ -89,7 +89,7 @@ class Header3 extends Component {
                 <Thumbnail source={red} />
                 <Body>
                   <Text style={{color: 'red'}}>Galina "Red" Reznikov</Text>
-                  <Text note >Albuquerque, NM</Text>
+                  <Text note >Litchfield, NY</Text>
                 </Body>
               </Left>
             </CardItem>
