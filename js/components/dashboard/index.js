@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Image, View } from "react-native";
+import Permitted from '../vistors/permitted'
 
 import {
   Container,
@@ -64,13 +65,13 @@ class NHCardImage extends Component {
             <CardItem style={{ paddingVertical: 0 }}>
               <Left>
                 <Button iconLeft transparent>
-                  <Icon active name="thumbs-up" />
+                  <Icon active name="ios-people" />
                   <Text>48 Meetings</Text>
                 </Button>
               </Left>
               <Body>
                 <Button iconLeft transparent>
-                  <Icon active name="chatbubbles" />
+                  <Icon active name="chatboxes" />
                   <Text>3 Visitors</Text>
                 </Button>
               </Body>

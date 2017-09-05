@@ -34,22 +34,6 @@ const datas = [
     route: "Header4",
     text: "Pending"
   }
-  // {
-  //   route: "Header5",
-  //   text: "Icon and Text Buttons"
-  // },
-  // {
-  //   route: "Header6",
-  //   text: "Multiple Icon Buttons"
-  // },
-  // {
-  //   route: "Header7",
-  //   text: "Title and Subtitle"
-  // },
-  // {
-  //   route: "Header8",
-  //   text: "Custom Background Color"
-  // }
 ];
 
 class HeaderNB extends Component {
