@@ -70,14 +70,14 @@ class Schedule extends Component {
             <CardItem style={{ paddingVertical: 0 }}>
               <Left>
                 <Button iconLeft transparent>
-                  <Icon active name="thumbs-up" />
+                  <Icon active name="ios-person" />
                   <Text>48 Meetings</Text>
                 </Button>
               </Left>
               <Body>
                 <Button iconLeft transparent>
-                  <Icon active name="chatbubbles" />
-                  <Text>2 Associates</Text>
+                  <Icon active name="chatboxes" />
+                  <Text>321 Messages</Text>
                 </Button>
               </Body>
               <Right>
