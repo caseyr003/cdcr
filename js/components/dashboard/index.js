@@ -64,7 +64,7 @@ class NHCardImage extends Component {
             </Button>
             <CardItem style={{ paddingVertical: 0 }}>
               <Left>
-                <Button iconLeft transparent>
+                <Button transparent onPress={() => this.props.navigation.navigate("Permitted")}iconLeft transparent>
                   <Icon active name="ios-people" />
                   <Text>48 Meetings</Text>
                 </Button>
