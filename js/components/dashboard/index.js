@@ -66,7 +66,7 @@ class NHCardImage extends Component {
 
             <CardItem cardBody>
               <Grid>
-                <Col style={styles.colBig} onPress={() => this.props.navigation.navigate("Schedule")}>
+                <Col style={styles.colBig} onPress={() => this.props.navigation.navigate("Meetings")}>
                   <View>
                     <Image square style={styles.icon} source={upcoming} />
                     <Text style={styles.smallTxt}>Upcoming Meetings</Text>
@@ -80,7 +80,7 @@ class NHCardImage extends Component {
                       <Text style={styles.smallTxt}>Schedule Meeting</Text>
                     </View>
                   </Row>
-                  <Row style={styles.colSmall} onPress={() => this.props.navigation.navigate("Schedule")}>
+                  <Row style={styles.colSmall} onPress={() => this.props.navigation.navigate("Checklist")}>
                     <View>
                       <Image square style={styles.iconSmall} source={checklist} />
                       <Text style={styles.smallTxt}>Meeting Checklist</Text>
@@ -106,7 +106,7 @@ class NHCardImage extends Component {
                     </View>
 
                   </Row>
-                  <Row style={styles.colSmall} onPress={() => this.props.navigation.navigate("Schedule")}>
+                  <Row style={styles.colSmall} onPress={() => this.props.navigation.navigate("Form106")}>
                     <View>
                       <Image square style={styles.iconSmall} source={form} />
                       <Text style={styles.smallTxt}>Form 106</Text>
@@ -115,7 +115,7 @@ class NHCardImage extends Component {
                   </Row>
                 </Col>
 
-                <Col style={styles.colBig} onPress={() => this.props.navigation.navigate("Schedule")}>
+                <Col style={styles.colBig} onPress={() => this.props.navigation.navigate("Associates")}>
                   <View>
                     <Image square style={styles.icon} source={associates} />
                     <Text style={styles.smallTxt}>Associates</Text>

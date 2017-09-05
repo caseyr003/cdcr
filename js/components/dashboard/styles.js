@@ -67,5 +67,5 @@ export default {
    alignItems: 'center',
    width: 60,
    height: 60
-  }
+ }
 };

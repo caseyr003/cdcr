@@ -63,27 +63,9 @@ class Schedule extends Component {
                 </Body>
               </Left>
             </CardItem>
-
-            <CardItem cardBody>
-
-            </CardItem>
-            <CardItem style={{ paddingVertical: 0 }}>
-              <Left>
-                <Button iconLeft transparent>
-                  <Icon active name="thumbs-up" />
-                  <Text>48 Meetings</Text>
-                </Button>
-              </Left>
-              <Body>
-                <Button iconLeft transparent>
-                  <Icon active name="chatbubbles" />
-                  <Text>2 Associates</Text>
-                </Button>
-              </Body>
-              <Right>
-                <Text>18h ago</Text>
-              </Right>
-            </CardItem>
+            <Button transparent onPress={() => this.props.navigation.navigate("Associates") }>
+              <Text>Meet with another Associate</Text>
+            </Button>
           </Card>
 
 

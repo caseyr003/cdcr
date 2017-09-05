@@ -11,6 +11,10 @@ import Dashboard from "./components/dashboard/";
 import Schedule from "./components/schedule/";
 import Default from "./components/button/default";
 
+import Form106 from "./components/form106/";
+import Checklist from "./components/checklist/";
+import Meetings from "./components/meetings/";
+import Associates from "./components/associates/";
 import Vistors from "./components/vistors/";
 import Permitted from "./components/vistors/permitted";
 import Pending from "./components/vistors/pending";
@@ -22,14 +26,18 @@ const AppNavigator = StackNavigator(
         Drawer: { screen: Drawer },
 
         Dashboard: { screen: Dashboard },
+        Meetings: { screen: Meetings },
 
         Schedule: { screen: Schedule },
+        Checklist: { screen: Checklist },
 
         Permitted: { screen: Permitted },
         Pending: { screen: Pending },
         Forbidden: { screen: Forbidden },
 
         Default: { screen: Default },
+        Associates: { screen: Associates },
+        Form106: { screen: Form106 },
 
     },
     {
