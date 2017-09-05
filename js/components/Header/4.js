@@ -17,13 +17,13 @@ import {
 } from "native-base";
 
 import styles from "./styles";
-const warren = require("../../../img/warren.png");
-const red = require("../../../img/red.jpg");
-const pornstache = require("../../../img/pornstache.jpg");
+const waltjr = require("../../../img/waltjr.jpg");
+const skyler = require("../../../img/skyler.jpg");
+const jesse = require("../../../img/jesse.jpg");
 
 
 
-class Header3 extends Component {
+class Header2 extends Component {
   // eslint-disable-line
 
   render() {
@@ -36,7 +36,7 @@ class Header3 extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Forbidden</Title>
+            <Title>Pending</Title>
           </Body>
           <Right>
             <Button transparent onPress={() => this.props.navigation.goBack()}>
@@ -50,10 +50,10 @@ class Header3 extends Component {
           <Card style={styles.mb}>
             <CardItem>
               <Left>
-                <Thumbnail source={warren} />
+                <Thumbnail source={jesse} />
                 <Body>
-                  <Text style={{color: 'red'}}>Suzzane "Crazy Eyes" Warren</Text>
-                  <Text note>Litchfield, NY</Text>
+                  <Text>Jesse Pinkman</Text>
+                  <Text note>Albuquerque, NM</Text>
                 </Body>
               </Left>
             </CardItem>
@@ -61,24 +61,21 @@ class Header3 extends Component {
             <CardItem cardBody>
 
             </CardItem>
-            <Button transparent>
-              <Text style={{color: 'red'}}>Reason: Throws pies at innmates</Text>
-            </Button>
             <CardItem style={{ paddingVertical: 0 }}>
-              <Left >
+              <Left>
                 <Button iconLeft transparent>
-                  <Icon  style={{color: 'red'}}  active name="thumbs-down" />
-                  <Text >2 Meetings</Text>
+                  <Icon active name="thumbs-up" />
+                  <Text>Application Recieved</Text>
                 </Button>
               </Left>
               <Body>
                 <Button iconLeft transparent>
                   <Icon active name="chatbubbles" />
-                  <Text>2 messages</Text>
+                  <Text>5 messages</Text>
                 </Button>
               </Body>
               <Right>
-                <Text>1 day ago</Text>
+                <Text>4 days ago</Text>
               </Right>
             </CardItem>
           </Card>
@@ -86,35 +83,32 @@ class Header3 extends Component {
           <Card style={styles.mb}>
             <CardItem>
               <Left>
-                <Thumbnail source={red} />
+                <Thumbnail source={waltjr} />
                 <Body>
-                  <Text style={{color: 'red'}}>Galina "Red" Reznikov</Text>
-                  <Text note >Litchfield, NY</Text>
+                  <Text>Walter White Jr</Text>
+                  <Text note>Albuquerque, NM</Text>
                 </Body>
               </Left>
             </CardItem>
             
             <CardItem cardBody>
 
-            </CardItem>
-            <Button transparent>
-              <Text style={{color: 'red'}}>Reason: Known member of Russian Mafia</Text>
-            </Button>
+            </CardItem> 
             <CardItem style={{ paddingVertical: 0 }}>
               <Left>
                 <Button iconLeft transparent>
-                  <Icon style={{color: 'red'}}  active name="thumbs-down" />
-                  <Text>0 Meetings</Text>
+                  <Icon active name="thumbs-up" />
+                  <Text>Application Recieved</Text>
                 </Button>
               </Left>
               <Body>
                 <Button iconLeft transparent>
                   <Icon active name="chatbubbles" />
-                  <Text>4 messages</Text>
+                  <Text>15 messages</Text>
                 </Button>
               </Body>
               <Right>
-                <Text> 8 days ago</Text>
+                <Text>4 hours ago</Text>
               </Right>
             </CardItem>
           </Card>
@@ -122,10 +116,10 @@ class Header3 extends Component {
           <Card style={styles.mb}>
             <CardItem>
               <Left>
-                <Thumbnail source={pornstache} />
+                <Thumbnail source={skyler} />
                 <Body>
-                  <Text style={{color: 'red'}} >George "Pornstache" Mendez</Text>
-                  <Text note>Litchfield, NY</Text>
+                  <Text>Skyler White</Text>
+                  <Text note>Albuquerque, NM</Text>
                 </Body>
               </Left>
             </CardItem>
@@ -133,14 +127,11 @@ class Header3 extends Component {
             <CardItem cardBody>
 
             </CardItem>
-            <Button transparent>
-              <Text style={{color: 'red'}}>Reason: Bringing drugs into prison</Text>
-            </Button>
             <CardItem style={{ paddingVertical: 0 }}>
               <Left>
                 <Button iconLeft transparent>
-                  <Icon style={{color: 'red'}}  active name="thumbs-down" />
-                  <Text>0 Meetings</Text>
+                  <Icon active name="thumbs-up" />
+                  <Text>Application Recieved</Text>
                 </Button>
               </Left>
               <Body>
@@ -150,7 +141,7 @@ class Header3 extends Component {
                 </Button>
               </Body>
               <Right>
-                <Text>12 days ago</Text>
+                <Text>13 days ago</Text>
               </Right>
             </CardItem>
           </Card>
@@ -161,4 +152,4 @@ class Header3 extends Component {
   }
 }
 
-export default Header3;
+export default Header2;
