@@ -60,6 +60,11 @@ class Permitted extends Component {
                   <Text note>Litchfield, NY</Text>
                 </Body>
               </Left>
+              <Right>
+                <Button iconRight transparent>
+                  <Icon style={{color: 'green'}}active name="radio-button-on"/>
+                </Button>
+              </Right>
             </CardItem>
 
             <CardItem cardBody>
@@ -72,13 +77,13 @@ class Permitted extends Component {
             <CardItem style={{ paddingVertical: 0 }}>
               <Left>
                 <Button iconLeft transparent>
-                  <Icon active name="thumbs-up" />
+                  <Icon active name="ios-person" />
                   <Text> 10 Meetings</Text>
                 </Button>
               </Left>
               <Body>
                 <Button iconLeft transparent>
-                  <Icon active name="chatbubbles" />
+                  <Icon active name="chatboxes" />
                   <Text>5 messages</Text>
                 </Button>
               </Body>
@@ -97,6 +102,11 @@ class Permitted extends Component {
                   <Text note>Albuquerque, NM</Text>
                 </Body>
               </Left>
+              <Right>
+                <Button iconRight transparent>
+                  <Icon style={{color: 'green'}}active name="radio-button-on"/>
+                </Button>
+              </Right>
             </CardItem>
 
             <CardItem cardBody>
@@ -108,13 +118,13 @@ class Permitted extends Component {
             <CardItem style={{ paddingVertical: 0 }}>
               <Left>
                 <Button iconLeft transparent>
-                  <Icon active name="thumbs-up" />
+                  <Icon active name="ios-person" />
                   <Text>15 Meetings</Text>
                 </Button>
               </Left>
               <Body>
                 <Button iconLeft transparent>
-                  <Icon active name="chatbubbles" />
+                  <Icon active name="chatboxes" />
                   <Text>15 messages</Text>
                 </Button>
               </Body>
@@ -133,6 +143,11 @@ class Permitted extends Component {
                   <Text note>Litchfield, NY</Text>
                 </Body>
               </Left>
+              <Right>
+                <Button iconRight transparent>
+                  <Icon style={{color: 'green'}}active name="radio-button-on"/>
+                </Button>
+              </Right>
             </CardItem>
 
             <CardItem cardBody>
@@ -144,13 +159,13 @@ class Permitted extends Component {
             <CardItem style={{ paddingVertical: 0 }}>
               <Left>
                 <Button iconLeft transparent>
-                  <Icon active name="thumbs-up" />
+                  <Icon active name="ios-person" />
                   <Text>10 Meetings</Text>
                 </Button>
               </Left>
               <Body>
                 <Button iconLeft transparent>
-                  <Icon active name="chatbubbles" />
+                  <Icon active name="chatboxes" />
                   <Text>8 messages</Text>
                 </Button>
               </Body>
