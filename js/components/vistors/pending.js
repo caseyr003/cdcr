@@ -60,6 +60,11 @@ class Pending extends Component {
                   <Text note>Albuquerque, NM</Text>
                 </Body>
               </Left>
+              <Right>
+                <Button iconRight transparent>
+                  <Icon style={{color: '#ffcc00'}}active name="radio-button-on"/>
+                </Button>
+              </Right>
             </CardItem>
 
             <CardItem cardBody>
@@ -68,13 +73,13 @@ class Pending extends Component {
             <CardItem style={{ paddingVertical: 0 }}>
               <Left>
                 <Button iconLeft transparent>
-                  <Icon active name="thumbs-up" />
+                  <Icon style={{color: '#ffcc00'}} active name="thumbs-up" />
                   <Text>Application Recieved</Text>
                 </Button>
               </Left>
               <Body>
                 <Button iconLeft transparent>
-                  <Icon active name="chatbubbles" />
+                  <Icon active name="chatboxes" />
                   <Text>5 messages</Text>
                 </Button>
               </Body>
@@ -93,6 +98,11 @@ class Pending extends Component {
                   <Text note>Albuquerque, NM</Text>
                 </Body>
               </Left>
+              <Right>
+                <Button iconRight transparent>
+                  <Icon style={{color: '#ffcc00'}}active name="radio-button-on"/>
+                </Button>
+              </Right>
             </CardItem>
 
             <CardItem cardBody>
@@ -101,13 +111,13 @@ class Pending extends Component {
             <CardItem style={{ paddingVertical: 0 }}>
               <Left>
                 <Button iconLeft transparent>
-                  <Icon active name="thumbs-up" />
+                  <Icon style={{color: '#ffcc00'}} active name="thumbs-up" />
                   <Text>Application Recieved</Text>
                 </Button>
               </Left>
               <Body>
                 <Button iconLeft transparent>
-                  <Icon active name="chatbubbles" />
+                  <Icon active name="chatboxes" />
                   <Text>15 messages</Text>
                 </Button>
               </Body>
@@ -126,6 +136,11 @@ class Pending extends Component {
                   <Text note>Albuquerque, NM</Text>
                 </Body>
               </Left>
+              <Right>
+                <Button iconRight transparent>
+                  <Icon style={{color: '#ffcc00'}}active name="radio-button-on"/>
+                </Button>
+              </Right>
             </CardItem>
 
             <CardItem cardBody>
@@ -134,13 +149,13 @@ class Pending extends Component {
             <CardItem style={{ paddingVertical: 0 }}>
               <Left>
                 <Button iconLeft transparent>
-                  <Icon active name="thumbs-up" />
+                  <Icon style={{color: '#ffcc00'}} active name="thumbs-up" />
                   <Text>Application Recieved</Text>
                 </Button>
               </Left>
               <Body>
                 <Button iconLeft transparent>
-                  <Icon active name="chatbubbles" />
+                  <Icon active name="chatboxes" />
                   <Text>8 messages</Text>
                 </Button>
               </Body>

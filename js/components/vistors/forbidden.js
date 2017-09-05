@@ -56,28 +56,33 @@ class Forbidden extends Component {
               <Left>
                 <Thumbnail source={warren} />
                 <Body>
-                  <Text style={{color: 'red'}}>Suzzane "Crazy Eyes" Warren</Text>
+                  <Text>Suzzane "Crazy Eyes" Warren</Text>
                   <Text note>Litchfield, NY</Text>
                 </Body>
               </Left>
+              <Right>
+                <Button iconRight transparent>
+                  <Icon style={{color: 'red'}}active name="radio-button-on"/>
+                </Button>
+              </Right>
             </CardItem>
 
             <CardItem cardBody>
 
             </CardItem>
             <Button transparent>
-              <Text style={{color: 'red'}}>Reason: Throws pies at innmates</Text>
+              <Text>Reason: Throws pies at innmates</Text>
             </Button>
             <CardItem style={{ paddingVertical: 0 }}>
               <Left >
                 <Button iconLeft transparent>
-                  <Icon  style={{color: 'red'}}  active name="thumbs-down" />
-                  <Text >2 Meetings</Text>
+                  <Icon active name="ios-person" />
+                  <Text>2 Meetings</Text>
                 </Button>
               </Left>
               <Body>
                 <Button iconLeft transparent>
-                  <Icon active name="chatbubbles" />
+                  <Icon active name="chatboxes" />
                   <Text>2 messages</Text>
                 </Button>
               </Body>
@@ -92,28 +97,33 @@ class Forbidden extends Component {
               <Left>
                 <Thumbnail source={red} />
                 <Body>
-                  <Text style={{color: 'red'}}>Galina "Red" Reznikov</Text>
-                  <Text note >Albuquerque, NM</Text>
+                  <Text>Galina "Red" Reznikov</Text>
+                  <Text note >Litchfield, NY</Text>
                 </Body>
               </Left>
+              <Right>
+                <Button iconRight transparent>
+                  <Icon style={{color: 'red'}}active name="radio-button-on"/>
+                </Button>
+              </Right>
             </CardItem>
 
             <CardItem cardBody>
 
             </CardItem>
             <Button transparent>
-              <Text style={{color: 'red'}}>Reason: Known member of Russian Mafia</Text>
+              <Text>Reason: Known member of Russian Mafia</Text>
             </Button>
             <CardItem style={{ paddingVertical: 0 }}>
               <Left>
                 <Button iconLeft transparent>
-                  <Icon style={{color: 'red'}}  active name="thumbs-down" />
+                  <Icon  active name="ios-person" />
                   <Text>0 Meetings</Text>
                 </Button>
               </Left>
               <Body>
                 <Button iconLeft transparent>
-                  <Icon active name="chatbubbles" />
+                  <Icon active name="chatboxes" />
                   <Text>4 messages</Text>
                 </Button>
               </Body>
@@ -128,28 +138,33 @@ class Forbidden extends Component {
               <Left>
                 <Thumbnail source={pornstache} />
                 <Body>
-                  <Text style={{color: 'red'}} >George "Pornstache" Mendez</Text>
+                  <Text>George "Pornstache" Mendez</Text>
                   <Text note>Litchfield, NY</Text>
                 </Body>
               </Left>
+              <Right>
+                <Button iconRight transparent>
+                  <Icon style={{color: 'red'}}active name="radio-button-on"/>
+                </Button>
+              </Right>
             </CardItem>
 
             <CardItem cardBody>
 
             </CardItem>
             <Button transparent>
-              <Text style={{color: 'red'}}>Reason: Bringing drugs into prison</Text>
+              <Text>Reason: Bringing drugs into prison</Text>
             </Button>
             <CardItem style={{ paddingVertical: 0 }}>
               <Left>
                 <Button iconLeft transparent>
-                  <Icon style={{color: 'red'}}  active name="thumbs-down" />
+                  <Icon active name="ios-person" />
                   <Text>0 Meetings</Text>
                 </Button>
               </Left>
               <Body>
                 <Button iconLeft transparent>
-                  <Icon active name="chatbubbles" />
+                  <Icon active name="chatboxes" />
                   <Text>8 messages</Text>
                 </Button>
               </Body>
