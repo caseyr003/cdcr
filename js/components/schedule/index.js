@@ -30,6 +30,8 @@ var CANCEL_INDEX = 13;
 class Schedule extends Component {
   //eslint-disable-line
 
+
+
   render() {
     return (
       <Container style={styles.container}>
@@ -64,6 +66,9 @@ class Schedule extends Component {
               </Left>
             </CardItem>
 
+            <Button transparent onPress={() => this.props.navigation.navigate("Associates") }>
+              <Text>Meet with another Associate</Text>
+            </Button>
             <CardItem cardBody>
 
             </CardItem>
