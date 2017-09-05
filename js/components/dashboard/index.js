@@ -59,7 +59,7 @@ class NHCardImage extends Component {
             <CardItem cardBody>
 
             </CardItem>
-            <Button transparent>
+            <Button transparent onPress={() => this.props.navigation.navigate("Schedule")}>
               <Text>Schedule Meeting</Text>
             </Button>
             <CardItem style={{ paddingVertical: 0 }}>
@@ -72,7 +72,7 @@ class NHCardImage extends Component {
               <Body>
                 <Button iconLeft transparent>
                   <Icon active name="chatboxes" />
-                  <Text>3 Visitors</Text>
+                  <Text>321 Messages</Text>
                 </Button>
               </Body>
               <Right>

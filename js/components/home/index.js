@@ -61,7 +61,7 @@ class Home extends Component {
 		          <Button block style={styles.signinBtn} onPress={() => this.props.navigation.navigate("Dashboard")}>
 		            <Text>Sign In</Text>
 		          </Button>
-              <Text style={styles.register}>Don't have an account? <Text style={styles.request}>Request one</Text></Text>
+              		<Text style={styles.register}>Don't have an account? <Text style={styles.request}>Request one</Text></Text>
 					</View>
 				</Image>
 			</Container>
