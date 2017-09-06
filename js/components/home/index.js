@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Image, View, StatusBar } from "react-native";
+import { Image, View, StatusBar, Keyboard } from "react-native";
 
 import {
   Container,
@@ -16,6 +16,7 @@ import {
   Right,
   Icon,
   Form,
+  Toast,
   Text
 } from "native-base";
 
@@ -36,6 +37,38 @@ const datas = [
 class Home extends Component {
 	// eslint-disable-line
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: "",
+      password: ""
+    };
+
+  }
+
+  checkUser = () => {
+    console.log(this.state.username);
+    console.log(this.state.password);
+    if(this.state.username.toString() === "Chuck" && this.state.password.toString() === "password"){
+      this.props.navigation.navigate("Dashboard");
+    } else {
+      Toast.show({
+        text: "Username/Password Incorrect",
+        buttonText: "Okay"
+      });
+
+      this.setState({
+  			username: "",
+  		});
+
+      this.setState({
+  			password: "",
+  		});
+
+    }
+  }
+
+
 	render() {
 		return (
 			<Container>
@@ -51,14 +84,14 @@ class Home extends Component {
 		          <Form style={styles.login}>
 		            <Item floatingLabel>
 		              <Label style={styles.gray}>Username</Label>
-		              <Input style={styles.gray} />
+		              <Input style={styles.gray} value={this.state.username} onChangeText={(username) => this.setState({username})} onSubmitEditing={Keyboard.dismiss} />
 		            </Item>
 		            <Item floatingLabel>
 		              <Label style={styles.gray}>Password</Label>
-		              <Input secureTextEntry={true} style={styles.gray} />
+		              <Input  value={this.state.password} onChangeText={(password) => this.setState({password})} onSubmitEditing={Keyboard.dismiss} secureTextEntry={true} style={styles.gray} />
 		            </Item>
 		          </Form>
-		          <Button block style={styles.signinBtn} onPress={() => this.props.navigation.navigate("Dashboard")}>
+		          <Button block style={styles.signinBtn} onPress={() => this.checkUser()}>
 		            <Text>Sign In</Text>
 		          </Button>
               		<Text style={styles.register}>Don't have an account? <Text style={styles.request}>Request one</Text></Text>
