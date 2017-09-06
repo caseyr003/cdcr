@@ -1,84 +1,80 @@
 import React, { Component } from "react";
-
 import {
   Container,
-  Card,
-  CardItem,
   Header,
+  ActionSheet,
   Title,
   Content,
   Button,
   Icon,
+  Badge,
+  Text,
   Left,
   Right,
   Body,
-  Text,
-  Thumbnail
+  Card,
+  CardItem,
+  Thumbnail,
+  Toast,
+  View
 } from "native-base";
 
 import styles from "./styles";
-const chapman = require("../../../img/chapman.png");
-const vause = require("../../../img/vause.png");
-const white = require("../../../img/white.jpg");
-const path = "../../../img/";
-const suffix = ".png";
 
-
+const logo = require("../../../img/contacts/varun.png");
+const cardImage = require("../../../img/drawer-cover.png");
 
 class Meetings extends Component {
-  // eslint-disable-line
+  //eslint-disable-line
 
   constructor(props) {
     super(props);
-
-    this.state = {meetings:[]};
+    this.state = {
+      meetings:[],
+      showToast: false,
+      i: 0
+    };
 
     this.loadData = this.loadData.bind(this);
-    this.meetingList = this.meetingList.bind(this);
+    this.meetingsList = this.meetingsList.bind(this);
 
     this.loadData();
   }
 
   loadData = () => {
     var self = this;
-    return fetch('http://private-a4cda-thebscolaro.apiary-mock.com/meetings')
+    return fetch('http://private-a4cda-thebscolaro.apiary-mock.com/upcoming')
       .then((response) => response.json())
       .then((responseJson) => {
-        self.setState({meetings: responseJson.meetings});
-        console.log(responseJson);
+        self.setState({meetings: responseJson.upcomings});
+        console.log(this.state.meetings[0].name);
       })
       .catch((error) => {
         console.error(error);
       });
   }
 
-  meetingList = () => {
+  toggleList = () => {
+    if(this.state.i == 1){
+      this.setState({i: 2});
+    } else if(this.state.i == 2) {
+      this.setState({i: 0});
+    } else {
+      this.setState({i: 1});
+    }
+    console.log(this.state.i);
+  }
+
+  meetingsList = () => {
     const list = this.state.meetings.map((meeting) =>
-      <Card key={meeting.name}>
+      <Card style={styles.mb}>
         <CardItem>
           <Left>
-            <Thumbnail source={"https://previews.123rf.com/images/racorn/racorn1308/racorn130805649/21341221-Profile-portrait-of-a-charming-young-business-woman-being-happy-and-smiling-in-an-office-setting--Stock-Photo.jpg"} />
+            <Thumbnail source={logo} />
             <Body>
               <Text>{meeting.name}</Text>
               <Text note>{meeting.location}</Text>
             </Body>
-          </Left>
-        </CardItem>
-
-        <CardItem cardBody>
-
-        <Button transparent onPress={() => this.props.navigation.navigate("Schedule") }>
-          <Text>Get Directions</Text>
-        </Button>
-
-        <Button transparent onPress={() => this.props.navigation.navigate("Schedule") }>
-          <Text>Checklist</Text>
-        </Button>
-
-        </CardItem>
-        <CardItem style={{ paddingVertical: 0 }}>
-          <Left>
-            <Text>{meeting.date}</Text>
           </Left>
         </CardItem>
       </Card>
@@ -87,35 +83,65 @@ class Meetings extends Component {
     return (list);
   }
 
+  meetinsgNames = () => {
+    const list = this.state.meetings.map((meeting) =>
+      meeting.name
+    );
+
+    return (list);
+  }
+
+
+
   render() {
     return (
       <Container style={styles.container}>
         <Header
-          style={{ backgroundColor: "#008C57" }}
+          style={{ backgroundColor: "#008C57", borderBottomWidth: 0 }}
           androidStatusBarColor="#008C57"
           iosBarStyle="light-content"
         >
           <Left>
-            <Button transparent onPress={() => this.props.navigation.goBack()}>
-              <Icon style={{ color: "#fff" }} name="arrow-back" />
+            <Button
+              transparent
+              onPress={() => this.props.navigation.navigate("DrawerOpen")}
+            >
+              <Icon style={{ color: "#fff" }} name="menu" />
             </Button>
           </Left>
           <Body>
             <Title style={{ color: "#fff" }}>Meetings</Title>
           </Body>
-          <Right>
-            <Button transparent onPress={() => this.props.navigation.goBack()}>
-              <Icon style={{ color: "#fff" }} name="menu" />
-            </Button>
-          </Right>
-
+          <Right />
         </Header>
 
-        <Content padder>
+        <Content scrollEnabled={false}>
 
-          {this.meetingList()}
+        <View style={styles.profileInfo}>
+
+            {this.meetingsList()[this.state.i]}
+
+            <View style={styles.navBtn}>
+              <Left>
+
+              <Button transparent onPress={() => this.toggleList() }>
+                <Icon style={{ color: "#fff" }} name="arrow-back" /><Text style={styles.white}>Prev</Text>
+              </Button>
+
+              </Left>
+
+              <Button transparent onPress={() => this.toggleList() }>
+                <Text style={styles.white}>Next</Text><Icon style={{ color: "#fff" }} name="arrow-forward" />
+              </Button>
+
+            </View>
+
+          </View>
+
 
         </Content>
+
+
       </Container>
     );
   }

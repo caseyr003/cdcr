@@ -122,7 +122,8 @@ class NHCardImage extends Component {
                   </View>
                 </Col>
 
-              </Grid>            </CardItem>
+              </Grid>
+            </CardItem>
           </Card>
         </View>
 
@@ -133,23 +134,3 @@ class NHCardImage extends Component {
 }
 
 export default NHCardImage;
-
-// <Button transparent onPress={() => this.props.navigation.navigate("Schedule")}>
-//   <Text>Schedule Meeting</Text>
-// </Button>
-// <CardItem style={{ paddingVertical: 0 }}>
-//   <Left>
-//     <Button transparent onPress={() => this.props.navigation.navigate("Permitted")} iconLeft transparent>
-//       <Icon active name="ios-people" />
-//       <Text>48 Meetings</Text>
-//     </Button>
-//   </Left>
-//   <Body>
-//     <Button iconLeft transparent>
-//       <Icon active name="chatboxes" />
-//       <Text>321 Messages</Text>
-//     </Button>
-//   </Body>
-//   <Right>
-//     <Text>18h ago</Text>
-//   </Right>

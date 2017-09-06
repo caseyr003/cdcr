@@ -14,7 +14,9 @@ import {
   Body,
   Card,
   CardItem,
-  Thumbnail
+  Thumbnail,
+  Toast,
+  View
 } from "native-base";
 import { Calendar, CalendarList, Agenda } from 'react-native-calendars';
 import styles from "./styles";
@@ -22,13 +24,74 @@ import styles from "./styles";
 const logo = require("../../../img/contacts/varun.png");
 const cardImage = require("../../../img/drawer-cover.png");
 
-var BUTTONS = ["8:00am", "9:00am", "10:00am", "11:00am", "12:00am", "1:00pm",
-              "2:00pm", "3:00pm", "4:00pm", "5:00pm", "6:00pm", "7:00pm", "8:00pm", "Cancel"];
-var DESTRUCTIVE_INDEX = 13;
-var CANCEL_INDEX = 13;
+var BUTTONS = ["1:00pm", "2:00pm", "4:00pm", "6:00pm", "8:00pm", "Cancel"];
+var DESTRUCTIVE_INDEX = 5;
+var CANCEL_INDEX = 5;
 
 class Schedule extends Component {
   //eslint-disable-line
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      associates:[],
+      showToast: false,
+      i: 0
+    };
+
+    this.loadData = this.loadData.bind(this);
+    this.associateList = this.associateList.bind(this);
+
+    this.loadData();
+  }
+
+  loadData = () => {
+    var self = this;
+    return fetch('http://private-a4cda-thebscolaro.apiary-mock.com/associates')
+      .then((response) => response.json())
+      .then((responseJson) => {
+        self.setState({associates: responseJson.associates});
+        console.log(this.state.associates[0].photo);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
+
+  toggleList = () => {
+    if(this.state.i == 1){
+      this.setState({i: 0});
+    } else {
+      this.setState({i: 1});
+    }
+    console.log(this.state.i);
+  }
+
+  associateList = () => {
+    const list = this.state.associates.map((associate) =>
+      <Card style={styles.mb}>
+        <CardItem>
+          <Left>
+            <Thumbnail source={logo} />
+            <Body>
+              <Text>{associate.name}</Text>
+              <Text note>{associate.location}</Text>
+            </Body>
+          </Left>
+        </CardItem>
+      </Card>
+    );
+
+    return (list);
+  }
+
+  associateNames = () => {
+    const list = this.state.associates.map((associate) =>
+      associate.name
+    );
+
+    return (list);
+  }
 
 
 
@@ -36,7 +99,7 @@ class Schedule extends Component {
     return (
       <Container style={styles.container}>
         <Header
-          style={{ backgroundColor: "#008C57" }}
+          style={{ backgroundColor: "#008C57", borderBottomWidth: 0 }}
           androidStatusBarColor="#008C57"
           iosBarStyle="light-content"
         >
@@ -54,42 +117,28 @@ class Schedule extends Component {
           <Right />
         </Header>
 
-        <Content padder>
-          <Card style={styles.mb}>
-            <CardItem>
-              <Left>
-                <Thumbnail source={logo} />
-                <Body>
-                  <Text>Joey Smith</Text>
-                  <Text note>San Francisco, CA</Text>
-                </Body>
-              </Left>
-            </CardItem>
+        <Content scrollEnabled={false}>
 
-            <Button transparent onPress={() => this.props.navigation.navigate("Associates") }>
-              <Text>Meet with another Associate</Text>
-            </Button>
-            <CardItem cardBody>
+        <View style={styles.profileInfo}>
 
-            </CardItem>
-            <CardItem style={{ paddingVertical: 0 }}>
+            {this.associateList()[this.state.i]}
+
+            <View style={styles.navBtn}>
               <Left>
-                <Button iconLeft transparent>
-                  <Icon active name="ios-person" />
-                  <Text>48 Meetings</Text>
-                </Button>
+
+              <Button transparent onPress={() => this.toggleList() }>
+                <Icon style={{ color: "#fff" }} name="arrow-back" /><Text style={styles.white}>Prev</Text>
+              </Button>
+
               </Left>
-              <Body>
-                <Button iconLeft transparent>
-                  <Icon active name="chatboxes" />
-                  <Text>321 Messages</Text>
-                </Button>
-              </Body>
-              <Right>
-                <Text>18h ago</Text>
-              </Right>
-            </CardItem>
-          </Card>
+
+              <Button transparent onPress={() => this.toggleList() }>
+                <Text style={styles.white}>Next</Text><Icon style={{ color: "#fff" }} name="arrow-forward" />
+              </Button>
+
+            </View>
+
+          </View>
 
 
 
@@ -112,13 +161,18 @@ class Schedule extends Component {
                 },
                 buttonIndex => {
                   this.setState({ clicked: BUTTONS[buttonIndex] });
+                  Toast.show({
+                    text: "Meeting Scheduled for " + day.dateString.toString() + " at " + BUTTONS[buttonIndex] + " with " + this.associateNames()[this.state.i],
+                    buttonText: "Okay"
+                  })
+                  console.log(day.timestamp);
                 }
               )
 
               console.log('selected day', day)
             }}
             // Month format in calendar title. Formatting values: http://arshaw.com/xdate/#Formatting
-            monthFormat={'yyyy MM'}
+            monthFormat={'MMM yyyy'}
             // Handler which gets executed when visible month changes in calendar. Default = undefined
             onMonthChange={(month) => {console.log('month changed', month)}}
             // Hide month navigation arrows. Default = false
