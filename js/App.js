@@ -10,6 +10,7 @@ import Drawer from "./Drawer";
 import Dashboard from "./components/dashboard/";
 import Schedule from "./components/schedule/";
 import Default from "./components/button/default";
+import Locate from "./components/locate";
 
 import Form106 from "./components/form106/";
 import Checklist from "./components/checklist/";
@@ -24,9 +25,11 @@ import Forbidden from "./components/vistors/forbidden";
 const AppNavigator = StackNavigator(
     {
         Drawer: { screen: Drawer },
+        Locate: { screen: Locate },
 
         Dashboard: { screen: Dashboard },
         Meetings: { screen: Meetings },
+        Locate: { screen: Locate },
 
         Schedule: { screen: Schedule },
         Checklist: { screen: Checklist },

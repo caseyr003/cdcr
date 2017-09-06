@@ -43,9 +43,7 @@ class Permitted extends Component {
             <Title style={{ color: "#fff" }}>Form 106</Title>
           </Body>
           <Right>
-            <Button transparent onPress={() => this.props.navigation.goBack()}>
-              <Icon style={{ color: "#fff" }} name="menu" />
-            </Button>
+
           </Right>
 
         </Header>

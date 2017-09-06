@@ -4,7 +4,7 @@ const { StyleSheet } = React;
 
 export default {
   container: {
-    backgroundColor: "#FFF"
+    backgroundColor: "#eee"
   },
   mb10: {
     marginBottom: 10
@@ -44,5 +44,16 @@ export default {
     fontSize: 20,
     fontWeight: 'bold',
     marginLeft: 10
+  },
+  mapLocation: {
+    margin: 20,
+    marginTop: 0,
+    borderRadius: 4,
+    width: 340,
+    height: 400,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 1.5,
   }
 };

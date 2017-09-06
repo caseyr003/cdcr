@@ -64,9 +64,9 @@ class Checklist extends Component {
 				<Left>
 					<Button
 						transparent
-						onPress={() => this.props.navigation.navigate("Dashboard")}
+						onPress={() => this.props.navigation.goBack()}
 					>
-						<Icon style={{ color: "#fff" }} name="menu" />
+						<Icon style={{ color: "#fff" }} name="arrow-back" />
 					</Button>
 				</Left>
 				<Body>

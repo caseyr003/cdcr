@@ -20,33 +20,36 @@ import {
 } from "native-base";
 
 import styles from "./styles";
+import MapView from 'react-native-maps';
 
 const logo = require("../../../img/contacts/varun.png");
 const cardImage = require("../../../img/drawer-cover.png");
 
-class Meetings extends Component {
+class Locate extends Component {
   //eslint-disable-line
 
   constructor(props) {
     super(props);
     this.state = {
-      meetings:[],
+      associates:[],
       showToast: false,
       i: 0
     };
 
     this.loadData = this.loadData.bind(this);
-    this.meetingsList = this.meetingsList.bind(this);
+    this.latList = this.latList.bind(this);
+    this.lngList = this.lngList.bind(this);
+    this.associateList = this.associateList.bind(this);
 
     this.loadData();
   }
 
   loadData = () => {
     var self = this;
-    return fetch('http://private-a4cda-thebscolaro.apiary-mock.com/upcoming')
+    return fetch('http://private-a4cda-thebscolaro.apiary-mock.com/associates')
       .then((response) => response.json())
       .then((responseJson) => {
-        self.setState({meetings: responseJson.upcomings});
+        self.setState({associates: responseJson.associates});
       })
       .catch((error) => {
         console.error(error);
@@ -55,8 +58,6 @@ class Meetings extends Component {
 
   toggleList = () => {
     if(this.state.i == 1){
-      this.setState({i: 2});
-    } else if(this.state.i == 2) {
       this.setState({i: 0});
     } else {
       this.setState({i: 1});
@@ -64,15 +65,15 @@ class Meetings extends Component {
     console.log(this.state.i);
   }
 
-  meetingsList = () => {
-    const list = this.state.meetings.map((meeting) =>
+  associateList = () => {
+    const list = this.state.associates.map((associate) =>
       <Card style={styles.mb}>
         <CardItem>
           <Left>
-            <Thumbnail source={{uri: meeting.photo}} />
+            <Thumbnail source={{uri: associate.photo}} />
             <Body>
-              <Text>{meeting.name}</Text>
-              <Text note>{meeting.location}</Text>
+              <Text>{associate.name}</Text>
+              <Text note>{associate.location}</Text>
             </Body>
           </Left>
         </CardItem>
@@ -82,17 +83,17 @@ class Meetings extends Component {
     return (list);
   }
 
-  meetingsNames = () => {
-    const list = this.state.meetings.map((meeting) =>
-      meeting.id
+  latList = () => {
+    const list = this.state.associates.map((associate) =>
+      associate.lat
     );
 
     return (list);
   }
 
-  meetingDates = () => {
-    const list = this.state.meetings.map((meeting) =>
-      meeting.date
+  lngList = () => {
+    const list = this.state.associates.map((associate) =>
+      associate.lng
     );
 
     return (list);
@@ -111,13 +112,13 @@ class Meetings extends Component {
           <Left>
             <Button
               transparent
-              onPress={() => this.props.navigation.navigate("DrawerOpen")}
+              onPress={() => this.props.navigation.goBack()}
             >
-              <Icon style={{ color: "#fff" }} name="menu" />
+              <Icon style={{ color: "#fff" }} name="arrow-back" />
             </Button>
           </Left>
           <Body>
-            <Title style={{ color: "#fff" }}>Meetings</Title>
+            <Title style={{ color: "#fff" }}>Location</Title>
           </Body>
           <Right />
         </Header>
@@ -126,7 +127,7 @@ class Meetings extends Component {
 
         <View style={styles.profileInfo}>
 
-            {this.meetingsList()[this.state.i]}
+            {this.associateList()[this.state.i]}
 
             <View style={styles.navBtn}>
               <Left>
@@ -144,15 +145,21 @@ class Meetings extends Component {
             </View>
 
           </View>
-          <Text style={styles.dateTxt}>{this.meetingDates()[this.state.i]}</Text>
+          <MapView
+            style={styles.mapLocation}
+            initialRegion={{
+              latitude: 36.7783,
+              longitude: -119.4179,
+              latitudeDelta: 10.0,
+              longitudeDelta: 10.0,
+            }}
+          >
 
-          <View>
-          <Image
-            style={styles.qr}
-            source={{uri: 'https://chart.googleapis.com/chart?cht=qr&chs=400x400&chl='.concat(this.meetingsNames()[this.state.i])}}
+          <MapView.Marker
+            coordinate={{latitude: this.latList()[this.state.i], longitude: this.lngList()[this.state.i]}}
           />
-          <Text style={styles.qrTxt}>Scan QR Code upon arrival</Text>
-          </View>
+
+          </MapView>
 
 
         </Content>
@@ -163,4 +170,4 @@ class Meetings extends Component {
   }
 }
 
-export default Meetings;
+export default Locate;

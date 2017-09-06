@@ -72,7 +72,7 @@ class Schedule extends Component {
       <Card style={styles.mb}>
         <CardItem>
           <Left>
-            <Thumbnail source={logo} />
+            <Thumbnail source={{uri: associate.photo}} />
             <Body>
               <Text>{associate.name}</Text>
               <Text note>{associate.location}</Text>

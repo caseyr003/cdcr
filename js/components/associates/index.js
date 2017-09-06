@@ -44,7 +44,6 @@ class Form106 extends Component {
         .then((response) => response.json())
         .then((responseJson) => {
           self.setState({associates: responseJson.associates});
-          console.log(this.state.associates[0].photo);
         })
         .catch((error) => {
           console.error(error);
@@ -56,7 +55,7 @@ class Form106 extends Component {
         <Card style={styles.mb}>
           <CardItem>
             <Left>
-              <Thumbnail source={associate.photo.toString()} />
+              <Thumbnail source={{uri: associate.photo}} />
               <Body>
                 <Text>{associate.name}</Text>
                 <Text note>{associate.location}</Text>
@@ -103,16 +102,16 @@ class Form106 extends Component {
           iosBarStyle="light-content"
         >
           <Left>
-            <Button transparent onPress={() => this.props.navigation.goBack()}>
-              <Icon style={{ color: "#fff" }} name="arrow-back" />
+            <Button transparent onPress={() => this.props.navigation.navigate("DrawerOpen")}>
+              <Icon style={{ color: "#fff" }} name="menu" />
             </Button>
           </Left>
           <Body>
             <Title style={{ color: "#fff" }}>Associates</Title>
           </Body>
           <Right>
-            <Button transparent onPress={() => this.props.navigation.goBack()}>
-              <Icon style={{ color: "#fff" }} name="menu" />
+            <Button transparent>
+              <Icon style={{ color: "#fff" }} name="add" />
             </Button>
           </Right>
 

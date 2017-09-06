@@ -99,7 +99,7 @@ class NHCardImage extends Component {
 
 
                 <Col>
-                  <Row style={styles.colSmall} onPress={() => this.props.navigation.navigate("Schedule")}>
+                  <Row style={styles.colSmall} onPress={() => this.props.navigation.navigate("Locate")}>
                     <View>
                       <Image square style={styles.iconSmall} source={locate} />
                       <Text style={styles.smallTxt}>Locate</Text>

@@ -4,7 +4,7 @@ const { StyleSheet } = React;
 
 export default {
   container: {
-    backgroundColor: "#FFF"
+    backgroundColor: "#eee"
   },
   mb10: {
     marginBottom: 10
