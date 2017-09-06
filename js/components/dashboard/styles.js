@@ -11,26 +11,30 @@ export default {
     marginBottom: 7
   },
   mb: {
-    margin: 0
+    margin: 10
   },
   img: {
     width: 100,
     height: 100,
     borderRadius: 50,
-    marginLeft: 138
+    marginLeft: 30
   },
   title: {
     color: "#fff",
-    fontSize: 24
+    fontSize: 24,
+    marginLeft: 30
   },
   subtitle: {
     color: "#ccc",
-    paddingBottom: 10
+    paddingBottom: 10,
+    marginLeft: 30
   },
   smallTxt: {
     justifyContent: 'center',
     alignItems: 'center',
-    color: "#008C57"
+    color: "#008C57",
+    fontWeight: 'bold',
+    marginLeft: 10
   },
   colBig: {
     flex:1,
@@ -38,8 +42,8 @@ export default {
     alignItems:'center',
     justifyContent:'center',
     backgroundColor: "#fff",
-    height: 200,
-    width: 200
+    height: 196,
+
   },
   colSmall: {
     flex:1,
@@ -47,7 +51,7 @@ export default {
     alignItems:'center',
     justifyContent:'center',
     backgroundColor: "#fff",
-    height: 100
+    height: 96
   },
   profileInfo: {
     shadowColor: '#000',
@@ -59,13 +63,20 @@ export default {
   icon: {
    justifyContent: 'center',
    alignItems: 'center',
-   width: 120,
-   height: 120
+   width: 140,
+   height: 140,
+   marginLeft: 20
   },
   iconSmall: {
    justifyContent: 'center',
    alignItems: 'center',
    width: 60,
-   height: 60
+   height: 60,
+   marginLeft: 56
+ },
+ notification: {
+   color: "#fff",
+   fontSize: 18,
+   paddingTop: 10
  }
 };
